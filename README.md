@@ -1,4 +1,4 @@
-# 💤 LazyVim
+This is my own configuration for my neovim setup...
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+# plugins customly installed
+- wakatime-plugin
