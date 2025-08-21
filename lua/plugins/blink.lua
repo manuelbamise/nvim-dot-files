@@ -5,9 +5,7 @@ return{
   version = '1.*',
     opts = {
    keymap = { preset = 'default' },
-fuzzy ={
-    implementation = 'lua',
-},
+
 
     appearance = {
      nerd_font_variant = 'mono'
@@ -18,7 +16,7 @@ fuzzy ={
       default = { 'lsp', 'path', 'snippets', 'buffer' },
     },
 
-   fuzzy = { implementation = "prefer_rust_with_warning" }
+   fuzzy = { implementation = "lua" }
   },
   opts_extend = { "sources.default" }
 }

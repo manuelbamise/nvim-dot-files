@@ -5,7 +5,7 @@ return {
       require('dashboard').setup {
         theme = 'doom',
         config = {
-          header = { "Welcome to Neovim 🚀" },
+          header = { "\nThis is my dojo.." },
           center = {
             { desc = "Find File", action = "Telescope find_files" },
             { desc = "Recent Files", action = "Telescope oldfiles" },
@@ -17,8 +17,11 @@ return {
   },
 
   -- Telescope (fuzzy finder)
-  { "nvim-telescope/telescope.nvim",keys={
-      {'tf',':Telescope find_files<CR>', desc='telescope find files', silent= true}
+  { "nvim-telescope/telescope.nvim", keys={
+      {'tf',':Telescope find_files<CR>', desc='telescope find files', silent= true},
+{'tg',':Telescope live_grep<CR>', desc='telescope live live_grep', silent= true},
+
+      
   }, dependencies = { "nvim-lua/plenary.nvim" } },
 
   -- Treesitter (better syntax highlighting)
