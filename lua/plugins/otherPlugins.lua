@@ -1,21 +1,44 @@
 return {
 	-- Dashboard (custom opening page)
 	{
-		"glepnir/dashboard-nvim",
+		"nvimdev/dashboard-nvim",
 		event = "VimEnter",
 		config = function()
 			require("dashboard").setup({
-				theme = "doom",
+				theme = "hyper",
 				config = {
-					header = { "This is my dojo.." },
-					center = {
-						{ desc = "Find File", action = "Telescope find_files" },
-						{ desc = "Recent Files", action = "Telescope oldfiles" },
-						{ desc = "Open Config", action = "edit ~/.config/nvim/init.lua" },
+					week_header = { enable = true },
+					shortcut = {
+						-- action can be a function type
+						{
+							desc = "",
+							group = "highlight group",
+							key = "shortcut key",
+							action = "action when you press key",
+						},
 					},
+					packages = { enable = true }, -- show how many plugins neovim loaded
+					-- limit how many projects list, action when you press key or enter it will run this action.
+					-- action can be a function type, e.g.
+					-- action = func(path) vim.cmd('Telescope find_files cwd=' .. path) end
+					project = {
+						enable = true,
+						limit = 8,
+						icon = "Past projects",
+						label = "",
+						action = "Telescope find_files cwd=",
+					},
+					mru = { enable = true, limit = 10, icon = "Previous files", label = "", cwd_only = false },
+					footer = {}, -- footer
 				},
 			})
 		end,
+		dependencies = { { "nvim-tree/nvim-web-devicons" } },
+	},
+	{
+		"NStefan002/donut.nvim",
+		version = "*",
+		lazy = false,
 	},
 	-- Telescope (fuzzy finder)
 	{
@@ -27,8 +50,8 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
-	-- Treesitter (better syntax highlighting)
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	-- add nvim-treesitter
+	{ "nvim-treesitter/nvim-treesitter", branch = "master", lazy = false, build = ":TSUpdate" },
 
 	-- LSP + Autocomplete
 	{ "neovim/nvim-lspconfig" },
@@ -44,4 +67,5 @@ return {
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
+	{ "windwp/nvim-ts-autotag" },
 }
