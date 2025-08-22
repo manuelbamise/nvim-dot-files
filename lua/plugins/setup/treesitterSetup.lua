@@ -1,4 +1,25 @@
+local filetypes = {
+	"html",
+	"javascript",
+	"typescript",
+	"javascriptreact",
+	"typescriptreact",
+	"vue",
+	"tsx",
+	"jsx",
+	"rescript",
+	"xml",
+	"php",
+	"markdown",
+	"glimmer",
+	"handlebars",
+}
+
 require("nvim-treesitter.configs").setup({
+	autotag = {
+		enable = true,
+		filetypes = filetypes,
+	},
 	-- A list of parser names, or "all" (the listed parsers MUST always be installed)
 	ensure_installed = { "c", "lua", "markdown", "typescript" },
 

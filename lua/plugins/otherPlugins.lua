@@ -51,7 +51,7 @@ return {
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
-	{ "windwp/nvim-ts-autotag" },
+	{ "windwp/nvim-ts-autotag", dependencies = { "nvim-treesitter/nvim-treesitter" }, opts = {} },
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
