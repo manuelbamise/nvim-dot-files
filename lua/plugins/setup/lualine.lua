@@ -1,7 +1,8 @@
 require("lualine").setup({
+	--importing the package and configuring it
 	options = {
 		icons_enabled = true,
-		theme = "gruvbox",
+		theme = "auto",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
@@ -34,9 +35,9 @@ require("lualine").setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", "diagnostics" },
-		lualine_c = { "filename" },
-		lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_y = { "progress" },
+		lualine_c = { "filename", "searchcount" },
+		lualine_x = { "encoding", "filetype" },
+		lualine_y = { "fileformat" },
 		lualine_z = { "location" },
 	},
 	inactive_sections = {

@@ -38,6 +38,8 @@ return {
 
 	-- Git signs
 	{ "lewis6991/gitsigns.nvim", config = true },
+
+	--lualine
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
