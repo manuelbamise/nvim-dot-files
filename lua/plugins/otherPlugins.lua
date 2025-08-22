@@ -8,28 +8,12 @@ return {
 				theme = "hyper",
 				config = {
 					week_header = { enable = true },
-					shortcut = {
-						-- action can be a function type
-						{
-							desc = "",
-							group = "highlight group",
-							key = "shortcut key",
-							action = "action when you press key",
-						},
-					},
 					packages = { enable = true }, -- show how many plugins neovim loaded
-					-- limit how many projects list, action when you press key or enter it will run this action.
-					-- action can be a function type, e.g.
-					-- action = func(path) vim.cmd('Telescope find_files cwd=' .. path) end
 					project = {
-						enable = true,
-						limit = 8,
-						icon = "Past projects",
-						label = "",
-						action = "Telescope find_files cwd=",
+						enable = false,
 					},
-					mru = { enable = true, limit = 10, icon = "Previous files", label = "", cwd_only = false },
-					footer = {}, -- footer
+					-- mru = { enable = true, limit = 10, icon = "your icon", label = "", cwd_only = false },
+					-- footer = {}, -- footer
 				},
 			})
 		end,
@@ -68,4 +52,12 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
 	{ "windwp/nvim-ts-autotag" },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		---@module "ibl"
+		---@type ibl.config
+
+		opts = {},
+	},
 }
