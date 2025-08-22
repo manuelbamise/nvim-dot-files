@@ -4,4 +4,3 @@ require("config.options")
 require("config.lsp")
 
 vim.cmd([[colorscheme gruvbox]])
-
