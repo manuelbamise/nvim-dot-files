@@ -1,30 +1,22 @@
 return {
-	-- -- Dashboard (custom opening page)
-	-- {
-	-- 	"glepnir/dashboard-nvim",
-	-- 	event = "VimEnter",
-	-- 	config = function()
-	-- 		require("dashboard").setup({
-	-- 			theme = "doom",
-	-- 			config = {
-	-- 				header = { "This is my dojo.." },
-	-- 				center = {
-	-- 					{ desc = "Find File", action = "Telescope find_files" },
-	-- 					{ desc = "Recent Files", action = "Telescope oldfiles" },
-	-- 					{ desc = "Open Config", action = "edit ~/.config/nvim/init.lua" },
-	-- 				},
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
+	-- Dashboard (custom opening page)
 	{
-
-		"goolord/alpha-nvim",
+		"glepnir/dashboard-nvim",
+		event = "VimEnter",
 		config = function()
-			require("alpha").setup(require("alpha.themes.dashboard").config)
+			require("dashboard").setup({
+				theme = "doom",
+				config = {
+					header = { "This is my dojo.." },
+					center = {
+						{ desc = "Find File", action = "Telescope find_files" },
+						{ desc = "Recent Files", action = "Telescope oldfiles" },
+						{ desc = "Open Config", action = "edit ~/.config/nvim/init.lua" },
+					},
+				},
+			})
 		end,
 	},
-	--
 	-- Telescope (fuzzy finder)
 	{
 		"nvim-telescope/telescope.nvim",
@@ -46,4 +38,8 @@ return {
 
 	-- Git signs
 	{ "lewis6991/gitsigns.nvim", config = true },
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 }
