@@ -30,6 +30,7 @@ return {
 		keys = {
 			{ "tf", ":Telescope find_files<CR>", desc = "telescope find files", silent = true },
 			{ "tg", ":Telescope live_grep<CR>", desc = "telescope live live_grep", silent = true },
+			{ "tb", ":Telescope buffers<CR>", desc = "telescope open buffers", silent = true },
 		},
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},

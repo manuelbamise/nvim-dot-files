@@ -18,3 +18,8 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move left" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move down" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move up" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move right" })
+
+-- Keys to switch between open buffers
+
+vim.keymap.set("n", "<leader>h", ":bp<CR>", { desc = "Buffer previous" })
+vim.keymap.set("n", "<leader>l", ":bn<CR>", { desc = "Buffer next" })
