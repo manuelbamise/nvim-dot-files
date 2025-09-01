@@ -23,3 +23,5 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move right" })
 
 vim.keymap.set("n", "<leader>h", ":bp<CR>", { desc = "Buffer previous" })
 vim.keymap.set("n", "<leader>l", ":bn<CR>", { desc = "Buffer next" })
+
+vim.opt.clipboard="unnamedplus"
